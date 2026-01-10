@@ -109,7 +109,7 @@ export const experiences: Experience[] = [
     id: "exp-1",
     company: "DBS Tech India",
     companyLogo:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/DBS_Bank_Logo.svg/512px-DBS_Bank_Logo.svg.png",
+      "https://media.licdn.com/dms/image/v2/C4E0BAQFh61sImBQNiQ/company-logo_200_200/company-logo_200_200/0/1656325027414/dbstechin_logo?e=2147483647&v=beta&t=g6L-K6xPBmVqXOh-h6v_VxlO0VB0I9m1Y9bJ0GKP8Ls",
     role: "AI DevOps Apprentice",
     duration: "Jun 2025 – Present",
     location: "India",
@@ -138,7 +138,7 @@ export const experiences: Experience[] = [
   {
     id: "exp-2",
     company: "VE Commercial Vehicles Limited",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Eicher_logo.svg/512px-Eicher_logo.svg.png",
+    companyLogo: "https://media.licdn.com/dms/image/v2/D5616AQE6VBaGZxyZcw/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1664441808229?e=2147483647&v=beta&t=DGSvDzfKs6n49glCIn8vjU_C0af5HNpxA5h4bEijJcg",
     role: "Machine Learning Engineering Intern",
     duration: "Oct 2024 – Dec 2024",
     location: "Bhopal, India (Onsite)",
