@@ -3,11 +3,13 @@ import { personalInfo, getFeaturedProjects, experiences, certifications } from '
 import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { SEOHead } from '@/components/seo/SEOHead';
-import { ArrowRight, Github, Linkedin, Mail, GraduationCap, Briefcase, Award, Code2, Cloud, Brain, ExternalLink } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, GraduationCap, Briefcase, Award, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { SkillsShowcase } from '@/components/skills/SkillsShowcase';
+import { AchievementsSection } from '@/components/sections/AchievementsSection';
 
 /**
  * Homepage for Somil Jain's Portfolio
@@ -50,7 +52,7 @@ export default function Home() {
               >
                 <Badge variant="outline" className="px-4 py-2 text-sm font-medium">
                   <GraduationCap className="size-4 mr-2" />
-                  {personalInfo.university} • {personalInfo.graduationYear}
+                  BTech CSE • Class of {personalInfo.graduationYear}
                 </Badge>
               </motion.div>
 
@@ -84,16 +86,7 @@ export default function Home() {
                 {personalInfo.heroIntroduction}
               </motion.p>
 
-              {/* University Badge */}
-              <motion.div
-                className="flex items-center justify-center gap-2 text-muted-foreground"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.7 }}
-              >
-                <GraduationCap className="size-4" />
-                <span className="text-sm">{personalInfo.university}</span>
-              </motion.div>
+
 
               {/* CTA Buttons */}
               <motion.div
@@ -158,95 +151,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills Section */}
-        <section className="py-24 md:py-32 px-6 lg:px-8 bg-background border-t border-border">
-          <div className="max-w-6xl mx-auto">
-            <ScrollReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-                  Technical Expertise
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Bridging the gap between development and operations with AI-powered solutions
-                </p>
-              </div>
-            </ScrollReveal>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <ScrollReveal delay={0.1}>
-                <Card className="h-full hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <Cloud className="size-8 text-primary mb-2" />
-                    <CardTitle className="text-lg">DevOps & Cloud</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {personalInfo.skills.devops.slice(0, 8).map((skill) => (
-                        <Badge key={skill} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.2}>
-                <Card className="h-full hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <Brain className="size-8 text-primary mb-2" />
-                    <CardTitle className="text-lg">Libraries & Databases</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {personalInfo.skills.librariesDatabases.slice(0, 8).map((skill) => (
-                        <Badge key={skill} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.3}>
-                <Card className="h-full hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <Code2 className="size-8 text-primary mb-2" />
-                    <CardTitle className="text-lg">Languages</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {personalInfo.skills.languages.map((skill) => (
-                        <Badge key={skill} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.4}>
-                <Card className="h-full hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <Briefcase className="size-8 text-primary mb-2" />
-                    <CardTitle className="text-lg">OS/Software/Tools</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {personalInfo.skills.osSoftwareTools.map((skill) => (
-                        <Badge key={skill} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </ScrollReveal>
-            </div>
-          </div>
-        </section>
+        {/* Skills Section - Dynamic Showcase */}
+        <SkillsShowcase />
 
         {/* Featured Projects Section */}
         <section className="py-24 md:py-32 px-6 lg:px-8 border-t border-border">
@@ -450,6 +356,9 @@ export default function Home() {
             </ScrollReveal>
           </div>
         </section>
+
+        {/* Achievements Section */}
+        <AchievementsSection />
 
         {/* CTA Section */}
         <section className="py-24 md:py-32 px-6 lg:px-8 bg-primary text-primary-foreground">
