@@ -193,7 +193,7 @@ export const projects: Project[] = [
       "AI-driven decision-making for efficiency and satisfaction",
     ],
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
-    github: "https://github.com/somil2104",
+    github: "https://github.com/Somil2104/RetailIQ",
     featured: true,
   },
 ];
