@@ -10,14 +10,12 @@ export interface PersonInfo {
   heroIntroduction: string;
   biography: string;
   email: string;
-  phone?: string;
   university: string;
   degree: string;
   graduationYear: string;
   socialLinks: {
     linkedin?: string;
     github?: string;
-    twitter?: string;
   };
   skills: {
     languages: string[];
@@ -30,10 +28,11 @@ export interface PersonInfo {
 export interface Experience {
   id: string;
   company: string;
+  companyLogo: string;
   role: string;
   duration: string;
   location: string;
-  type: 'internship' | 'fulltime' | 'contract';
+  type: 'internship' | 'fulltime' | 'contract' | 'apprenticeship';
   description: string;
   achievements: string[];
   technologies: string[];
@@ -78,14 +77,13 @@ My journey in tech started with a curiosity about how systems work at scale. Thi
 I believe in the power of combining robust infrastructure with intelligent systems. Whether it's setting up CI/CD pipelines, deploying ML models at scale, or building end-to-end applications, I approach every project with a focus on efficiency, reliability, and innovation.
 
 When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.`,
-  email: "somil.jain@email.com",
+  email: "somiljain2104@gmail.com",
   university: "Vellore Institute of Technology",
   degree: "BTech Computer Science Engineering",
   graduationYear: "2026",
   socialLinks: {
-    linkedin: "https://linkedin.com/in/somiljain",
-    github: "https://github.com/somiljain",
-    twitter: "https://twitter.com/somiljain",
+    linkedin: "https://www.linkedin.com/in/somil-jain-183ba9247/",
+    github: "https://github.com/somil2104",
   },
   skills: {
     languages: ["Python (Proficient)", "C/C++", "JavaScript", "Matlab/R", "HTML/CSS"],
@@ -99,10 +97,11 @@ export const experiences: Experience[] = [
   {
     id: "exp-1",
     company: "DBS Tech India",
+    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/DBS_Bank_Logo.svg/512px-DBS_Bank_Logo.svg.png",
     role: "AI DevOps Apprentice",
     duration: "Jun 2025 – Present",
     location: "India",
-    type: "internship",
+    type: "apprenticeship",
     description: "8-month structured apprenticeship covering OS, RDBMS, Application Security, MariaDB, DevOps, Java/Spring Boot, REST, Microservices, Data Analysis, and Big Data (Hive, Hadoop, Spark).",
     achievements: [
       "Designed a hybrid customer segmentation pipeline (rules→MiniBatchKMeans) with MCC-based spend shares, tx per month, amt mean, and online share, improving targeting by 90% and driving segment-specific promotions",
@@ -115,7 +114,8 @@ export const experiences: Experience[] = [
   {
     id: "exp-2",
     company: "VE Commercial Vehicles Limited",
-    role: "Software Engineer Intern (Machine Learning Engineering)",
+    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Eicher_logo.svg/512px-Eicher_logo.svg.png",
+    role: "Machine Learning Engineering Intern",
     duration: "Oct 2024 – Dec 2024",
     location: "Bhopal, India (Onsite)",
     type: "internship",
@@ -146,7 +146,7 @@ export const projects: Project[] = [
       "Deployed on GitHub Pages for scalability",
     ],
     image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop",
-    github: "https://github.com/somiljain/dost-bot",
+    github: "https://github.com/somil2104",
     featured: true,
   },
   {
@@ -165,7 +165,7 @@ export const projects: Project[] = [
       "AI-driven decision-making for efficiency and satisfaction",
     ],
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
-    github: "https://github.com/somiljain/retailiq",
+    github: "https://github.com/somil2104",
     featured: true,
   },
 ];
