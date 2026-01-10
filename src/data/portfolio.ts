@@ -32,7 +32,7 @@ export interface Experience {
   role: string;
   duration: string;
   location: string;
-  type: 'internship' | 'fulltime' | 'contract' | 'apprenticeship';
+  type: "internship" | "fulltime" | "contract" | "apprenticeship";
   description: string;
   achievements: string[];
   technologies: string[];
@@ -42,7 +42,7 @@ export interface Project {
   id: string;
   title: string;
   slug: string;
-  category: 'devops' | 'aiml' | 'fullstack' | 'other';
+  category: "devops" | "aiml" | "fullstack" | "other";
   description: string;
   longDescription: string;
   technologies: string[];
@@ -61,7 +61,7 @@ export interface Certification {
   expiryDate?: string;
   credentialId?: string;
   credentialUrl?: string;
-  category: 'cloud' | 'devops' | 'aiml' | 'programming' | 'other';
+  category: "cloud" | "devops" | "aiml" | "programming" | "other";
   image?: string;
 }
 
@@ -69,7 +69,8 @@ export const personalInfo: PersonInfo = {
   name: "Somil Jain",
   title: "DevOps & AI/ML Engineer",
   tagline: "Building intelligent systems with scalable infrastructure",
-  heroIntroduction: "Final year Computer Science student passionate about automating deployments, building ML pipelines, and creating impactful tech solutions.",
+  heroIntroduction:
+    "Final year Computer Science student passionate about automating deployments, building ML pipelines, and creating impactful tech solutions.",
   biography: `I'm a final year BTech Computer Science Engineering student specializing in DevOps practices and AI/ML applications.
 
 My journey in tech started with a curiosity about how systems work at scale. This led me to explore the world of DevOps, where I found my passion for automation, containerization, and cloud infrastructure. Simultaneously, I dove deep into AI/ML, fascinated by how machines can learn and make decisions.
@@ -88,7 +89,17 @@ When I'm not coding, you'll find me exploring new technologies, contributing to 
   skills: {
     languages: ["Python (Proficient)", "C/C++", "JavaScript", "Matlab/R", "HTML/CSS"],
     osSoftwareTools: ["Linux", "Windows", "Git", "Figma", "Canva", "Photoshop"],
-    librariesDatabases: ["Keras", "Node.js", "React", "JQuery", "Numpy", "Pandas", "PostgreSQL", "MongoDB", "Firestore"],
+    librariesDatabases: [
+      "Keras",
+      "Node.js",
+      "React",
+      "JQuery",
+      "Numpy",
+      "Pandas",
+      "PostgreSQL",
+      "MongoDB",
+      "Firestore",
+    ],
     devops: ["AWS", "Jenkins", "GitHub Actions", "Maven", "Docker", "Kubernetes", "Ansible", "Terraform", "Vagrant"],
   },
 };
@@ -97,19 +108,32 @@ export const experiences: Experience[] = [
   {
     id: "exp-1",
     company: "DBS Tech India",
-    companyLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/DBS_Bank_Logo.svg/512px-DBS_Bank_Logo.svg.png",
+    companyLogo:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/DBS_Bank_Logo.svg/512px-DBS_Bank_Logo.svg.png",
     role: "AI DevOps Apprentice",
     duration: "Jun 2025 – Present",
     location: "India",
     type: "apprenticeship",
-    description: "8-month structured apprenticeship covering OS, RDBMS, Application Security, MariaDB, DevOps, Java/Spring Boot, REST, Microservices, Data Analysis, and Big Data (Hive, Hadoop, Spark).",
+    description:
+      "8-month structured apprenticeship covering OS, RDBMS, Application Security, MariaDB, DevOps, Java/Spring Boot, REST, Microservices, Data Analysis, and Big Data (Hive, Hadoop, Spark).",
     achievements: [
       "Designed a hybrid customer segmentation pipeline (rules→MiniBatchKMeans) with MCC-based spend shares, tx per month, amt mean, and online share, improving targeting by 90% and driving segment-specific promotions",
       "Established behavioral risk bands (frequency, ticket size, channel mix, diversity) to approve/deny promotions and exported a single contract (customer_recommendations.csv) for downstream systems",
       "Operationalized with reproducible controllers, pinned Python deps, and container-ready CLIs (XGBoost, scikit-learn), ensuring low-latency scoring and consistent releases",
       "Completing an 8-month structured apprenticeship covering OS, RDBMS, Application Security, MariaDB, DevOps, Java/Spring Boot, REST, Microservices, Data Analysis, and Big Data",
     ],
-    technologies: ["Python", "XGBoost", "scikit-learn", "Docker", "DevOps", "Java", "Spring Boot", "Hadoop", "Spark", "Hive"],
+    technologies: [
+      "Python",
+      "XGBoost",
+      "scikit-learn",
+      "Docker",
+      "DevOps",
+      "Java",
+      "Spring Boot",
+      "Hadoop",
+      "Spark",
+      "Hive",
+    ],
   },
   {
     id: "exp-2",
@@ -119,7 +143,8 @@ export const experiences: Experience[] = [
     duration: "Oct 2024 – Dec 2024",
     location: "Bhopal, India (Onsite)",
     type: "internship",
-    description: "Developed computer vision system for automated inspection of industrial dot-peen marked metal surfaces.",
+    description:
+      "Developed computer vision system for automated inspection of industrial dot-peen marked metal surfaces.",
     achievements: [
       "Developed a system using Python, OpenCV, and EasyOCR to extract cabin numbers from images uploaded by users, enabling automated inspection of industrial dot-peen marked metal surfaces across 3 different cabin types",
       "Trained the EasyOCR pretrained model on a custom dataset of industrial images to improve accuracy in recognizing low-contrast, challenging markings, achieving a peak confidence score of 91%",
@@ -135,8 +160,10 @@ export const projects: Project[] = [
     title: "Dost-Bot | AI-Powered Journal Application",
     slug: "dost-bot",
     category: "aiml",
-    description: "AI-driven journal web app with sentiment analysis and personalized responses using Google FLAN-T5-large model.",
-    longDescription: "Engineered an AI-driven journal web app with sentiment analysis and personalized responses using the Google FLAN-T5-large model, leveraging its 780 million parameter architecture for nuanced understanding of user mood and intent.",
+    description:
+      "AI-driven journal web app with sentiment analysis and personalized responses using Google FLAN-T5-large model.",
+    longDescription:
+      "Engineered an AI-driven journal web app with sentiment analysis and personalized responses using the Google FLAN-T5-large model, leveraging its 780 million parameter architecture for nuanced understanding of user mood and intent.",
     technologies: ["React", "FastAPI", "Hugging Face", "NLP", "Sentiment Analysis"],
     features: [
       "Sentiment analysis using Hugging Face emotion/sentiment pipeline",
@@ -146,7 +173,7 @@ export const projects: Project[] = [
       "Deployed on GitHub Pages for scalability",
     ],
     image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop",
-    github: "https://github.com/somil2104",
+    github: "https://github.com/Somil2104/Dost-Bot",
     featured: true,
   },
   {
@@ -155,7 +182,8 @@ export const projects: Project[] = [
     slug: "retailiq",
     category: "aiml",
     description: "AI-powered system for customer retention analysis and cost-to-serve optimization using ML models.",
-    longDescription: "Designed an AI-powered system leveraging ML models (Random Forest, XGBoost) to enable customer retention analysis and cost-to-serve optimization.",
+    longDescription:
+      "Designed an AI-powered system leveraging ML models (Random Forest, XGBoost) to enable customer retention analysis and cost-to-serve optimization.",
     technologies: ["Flask", "Node.js", "React", "Machine Learning", "Random Forest", "XGBoost"],
     features: [
       "Customer retention analysis using ML models",
@@ -174,14 +202,14 @@ export interface Achievement {
   id: string;
   title: string;
   description: string;
-  type: 'competition' | 'hackathon' | 'award';
+  type: "competition" | "hackathon" | "award";
 }
 
 export interface AdditionalInfo {
   id: string;
   title: string;
   description: string;
-  category: 'hobby' | 'leadership' | 'extracurricular';
+  category: "hobby" | "leadership" | "extracurricular";
 }
 
 export const achievements: Achievement[] = [
@@ -194,13 +222,15 @@ export const achievements: Achievement[] = [
   {
     id: "ach-2",
     title: "Amdocs GenAI Graduate Hackathon 2024–25",
-    description: "Selected as a Semi-Finalist among 10,893 participants; among the top 1% to successfully submit a working prototype.",
+    description:
+      "Selected as a Semi-Finalist among 10,893 participants; among the top 1% to successfully submit a working prototype.",
     type: "hackathon",
   },
   {
     id: "ach-3",
     title: "Accelerate Her in Tech – Hackathon by Nokia",
-    description: "Cleared Round 1 from over 30,000 participants and advanced to the Code Hunt round, securing a top rank.",
+    description:
+      "Cleared Round 1 from over 30,000 participants and advanced to the Code Hunt round, securing a top rank.",
     type: "hackathon",
   },
 ];
@@ -209,19 +239,22 @@ export const additionalInfo: AdditionalInfo[] = [
   {
     id: "add-1",
     title: "Stock Market Analysis",
-    description: "Regularly conduct independent stock market analysis to strengthen investment insight, market research skills, and data-driven decision-making abilities.",
+    description:
+      "Regularly conduct independent stock market analysis to strengthen investment insight, market research skills, and data-driven decision-making abilities.",
     category: "hobby",
   },
   {
     id: "add-2",
     title: "Model United Nations",
-    description: "High Commendation as Delegate of Luxembourg in UNODC committee at CNMUN. Active participant in Model United Nations, cultivating executive presence and cross-functional communication acumen.",
+    description:
+      "High Commendation as Delegate of Luxembourg in UNODC committee at CNMUN. Active participant in Model United Nations, cultivating executive presence and cross-functional communication acumen.",
     category: "extracurricular",
   },
   {
     id: "add-3",
     title: "UI/UX Lead, Android Club",
-    description: "Led a team of 4 UI/UX developers and 5 designers to deliver user-centric interfaces for college Android projects, coordinating design workflows and mentoring members in best practices.",
+    description:
+      "Led a team of 4 UI/UX developers and 5 designers to deliver user-centric interfaces for college Android projects, coordinating design workflows and mentoring members in best practices.",
     category: "leadership",
   },
 ];
@@ -304,5 +337,5 @@ export const certifications: Certification[] = [
   },
 ];
 
-export const getFeaturedProjects = () => projects.filter(p => p.featured);
-export const getProjectBySlug = (slug: string) => projects.find(p => p.slug === slug);
+export const getFeaturedProjects = () => projects.filter((p) => p.featured);
+export const getProjectBySlug = (slug: string) => projects.find((p) => p.slug === slug);
