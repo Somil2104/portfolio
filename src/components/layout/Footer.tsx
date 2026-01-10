@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail, Twitter } from 'lucide-react';
+import { Linkedin, Github, Mail } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +9,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-secondary/30">
+    <footer className="border-t border-border bg-card/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -42,24 +42,19 @@ export function Footer() {
                   Certifications
                 </Link>
               </li>
-              <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
 
           {/* Connect */}
           <div>
             <h4 className="font-medium mb-4">Connect</h4>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {personalInfo.socialLinks.linkedin && (
                 <a
                   href={personalInfo.socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-foreground transition-colors"
+                  className="p-2 rounded-lg bg-secondary hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="size-5" />
@@ -70,26 +65,15 @@ export function Footer() {
                   href={personalInfo.socialLinks.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-foreground transition-colors"
+                  className="p-2 rounded-lg bg-secondary hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
                   aria-label="GitHub"
                 >
                   <Github className="size-5" />
                 </a>
               )}
-              {personalInfo.socialLinks.twitter && (
-                <a
-                  href={personalInfo.socialLinks.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="size-5" />
-                </a>
-              )}
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="p-2 rounded-full bg-secondary hover:bg-secondary/80 text-muted-foreground hover:text-foreground transition-colors"
+                className="p-2 rounded-lg bg-secondary hover:bg-primary/10 text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >
                 <Mail className="size-5" />
