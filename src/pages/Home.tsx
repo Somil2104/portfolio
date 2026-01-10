@@ -1,16 +1,16 @@
-import { motion } from 'framer-motion';
-import { personalInfo, getFeaturedProjects, experiences, certifications } from '@/data/portfolio';
-import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
-import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import { SEOHead } from '@/components/seo/SEOHead';
-import { ArrowRight, Github, Linkedin, Mail, GraduationCap, Briefcase, Award, ExternalLink } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { SkillsShowcase } from '@/components/skills/SkillsShowcase';
-import { AchievementsSection } from '@/components/sections/AchievementsSection';
-import { ProjectCarousel } from '@/components/projects/ProjectCarousel';
+import { motion } from "framer-motion";
+import { personalInfo, getFeaturedProjects, experiences, certifications } from "@/data/portfolio";
+import { ScrollIndicator } from "@/components/ui/ScrollIndicator";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { SEOHead } from "@/components/seo/SEOHead";
+import { ArrowRight, Github, Linkedin, Mail, GraduationCap, Briefcase, Award, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { SkillsShowcase } from "@/components/skills/SkillsShowcase";
+import { AchievementsSection } from "@/components/sections/AchievementsSection";
+import { ProjectCarousel } from "@/components/projects/ProjectCarousel";
 
 export default function Home() {
   const featuredProjects = getFeaturedProjects();
@@ -19,11 +19,11 @@ export default function Home() {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title="Somil Jain | DevOps & AI/ML Engineer"
         description="Final year BTech CSE student at VIT. Specializing in DevOps, Cloud Infrastructure, and Machine Learning."
       />
-      
+
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="relative min-h-screen w-full overflow-hidden">
@@ -37,16 +37,6 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20"
-              >
-                <GraduationCap className="size-4 text-primary" />
-                <span className="text-sm font-medium text-primary">BTech CSE • Class of {personalInfo.graduationYear}</span>
-              </motion.div>
-
               <motion.h1
                 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight"
                 initial={{ opacity: 0, y: 20 }}
@@ -55,7 +45,7 @@ export default function Home() {
               >
                 <span className="gradient-text">{personalInfo.name}</span>
               </motion.h1>
-              
+
               <motion.p
                 className="text-xl md:text-2xl font-medium text-primary"
                 initial={{ opacity: 0, y: 20 }}
@@ -189,11 +179,7 @@ export default function Home() {
                       <div className="flex items-start gap-4">
                         {/* Company Logo */}
                         <div className="shrink-0 w-14 h-14 rounded-lg bg-white p-2 flex items-center justify-center border border-border">
-                          <img 
-                            src={exp.companyLogo} 
-                            alt={exp.company}
-                            className="w-full h-full object-contain"
-                          />
+                          <img src={exp.companyLogo} alt={exp.company} className="w-full h-full object-contain" />
                         </div>
                         <div className="flex-1">
                           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
