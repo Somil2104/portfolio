@@ -11,7 +11,6 @@ export interface PersonInfo {
   biography: string;
   email: string;
   phone?: string;
-  location: string;
   university: string;
   degree: string;
   graduationYear: string;
@@ -21,10 +20,10 @@ export interface PersonInfo {
     twitter?: string;
   };
   skills: {
-    devops: string[];
-    aiml: string[];
     languages: string[];
-    tools: string[];
+    osSoftwareTools: string[];
+    librariesDatabases: string[];
+    devops: string[];
   };
 }
 
@@ -80,71 +79,53 @@ I believe in the power of combining robust infrastructure with intelligent syste
 
 When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.`,
   email: "somil.jain@email.com",
-  location: "Vellore, Tamil Nadu, India",
   university: "Vellore Institute of Technology",
   degree: "BTech Computer Science Engineering",
-  graduationYear: "2025",
+  graduationYear: "2026",
   socialLinks: {
     linkedin: "https://linkedin.com/in/somiljain",
     github: "https://github.com/somiljain",
     twitter: "https://twitter.com/somiljain",
   },
   skills: {
-    devops: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Terraform", "Ansible", "AWS", "GCP", "Azure", "Prometheus", "Grafana", "ArgoCD"],
-    aiml: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "NLP", "Computer Vision", "MLflow", "Kubeflow", "Hugging Face"],
-    languages: ["Python", "JavaScript", "TypeScript", "Go", "Bash", "SQL"],
-    tools: ["Git", "Linux", "Nginx", "Redis", "PostgreSQL", "MongoDB", "VS Code", "Vim"],
+    languages: ["Python (Proficient)", "C/C++", "JavaScript", "Matlab/R", "HTML/CSS"],
+    osSoftwareTools: ["Linux", "Windows", "Git", "Figma", "Canva", "Photoshop"],
+    librariesDatabases: ["Keras", "Node.js", "React", "JQuery", "Numpy", "Pandas", "PostgreSQL", "MongoDB", "Firestore"],
+    devops: ["AWS", "Jenkins", "GitHub Actions", "Maven", "Docker", "Kubernetes", "Ansible", "Terraform", "Vagrant"],
   },
 };
 
 export const experiences: Experience[] = [
   {
     id: "exp-1",
-    company: "Tech Innovations Inc.",
-    role: "DevOps Engineering Intern",
-    duration: "May 2024 - Aug 2024",
-    location: "Bangalore, India",
+    company: "DBS Tech India",
+    role: "AI DevOps Apprentice",
+    duration: "Jun 2025 – Present",
+    location: "India",
     type: "internship",
-    description: "Worked on automating deployment pipelines and improving infrastructure reliability for microservices architecture.",
+    description: "8-month structured apprenticeship covering OS, RDBMS, Application Security, MariaDB, DevOps, Java/Spring Boot, REST, Microservices, Data Analysis, and Big Data (Hive, Hadoop, Spark).",
     achievements: [
-      "Reduced deployment time by 60% through CI/CD pipeline optimization",
-      "Implemented infrastructure as code using Terraform for AWS resources",
-      "Set up monitoring and alerting using Prometheus and Grafana",
-      "Containerized 15+ microservices using Docker and Kubernetes",
+      "Designed a hybrid customer segmentation pipeline (rules→MiniBatchKMeans) with MCC-based spend shares, tx per month, amt mean, and online share, improving targeting by 90% and driving segment-specific promotions",
+      "Established behavioral risk bands (frequency, ticket size, channel mix, diversity) to approve/deny promotions and exported a single contract (customer_recommendations.csv) for downstream systems",
+      "Operationalized with reproducible controllers, pinned Python deps, and container-ready CLIs (XGBoost, scikit-learn), ensuring low-latency scoring and consistent releases",
+      "Completing an 8-month structured apprenticeship covering OS, RDBMS, Application Security, MariaDB, DevOps, Java/Spring Boot, REST, Microservices, Data Analysis, and Big Data",
     ],
-    technologies: ["AWS", "Docker", "Kubernetes", "Terraform", "Jenkins", "Prometheus"],
+    technologies: ["Python", "XGBoost", "scikit-learn", "Docker", "DevOps", "Java", "Spring Boot", "Hadoop", "Spark", "Hive"],
   },
   {
     id: "exp-2",
-    company: "AI Solutions Lab",
-    role: "Machine Learning Intern",
-    duration: "Dec 2023 - Feb 2024",
-    location: "Remote",
+    company: "VE Commercial Vehicles Limited",
+    role: "Software Engineer Intern (Machine Learning Engineering)",
+    duration: "Oct 2024 – Dec 2024",
+    location: "Bhopal, India (Onsite)",
     type: "internship",
-    description: "Developed and deployed machine learning models for computer vision and NLP applications.",
+    description: "Developed computer vision system for automated inspection of industrial dot-peen marked metal surfaces.",
     achievements: [
-      "Built a real-time object detection system with 94% accuracy",
-      "Developed an NLP pipeline for sentiment analysis on customer reviews",
-      "Deployed ML models using FastAPI and Docker containers",
-      "Optimized model inference time by 40% using quantization techniques",
+      "Developed a system using Python, OpenCV, and EasyOCR to extract cabin numbers from images uploaded by users, enabling automated inspection of industrial dot-peen marked metal surfaces across 3 different cabin types",
+      "Trained the EasyOCR pretrained model on a custom dataset of industrial images to improve accuracy in recognizing low-contrast, challenging markings, achieving a peak confidence score of 91%",
+      "Implemented regex parsing to extract 9-character alphanumeric cabin numbers from OCR results and connected the system to an API for seamless data transfer and management",
     ],
-    technologies: ["Python", "TensorFlow", "PyTorch", "FastAPI", "Docker", "OpenCV"],
-  },
-  {
-    id: "exp-3",
-    company: "CloudScale Startup",
-    role: "Cloud Engineering Intern",
-    duration: "Jun 2023 - Aug 2023",
-    location: "Hyderabad, India",
-    type: "internship",
-    description: "Assisted in migrating legacy applications to cloud-native architecture on GCP.",
-    achievements: [
-      "Migrated 5 legacy applications to Google Cloud Platform",
-      "Implemented auto-scaling solutions reducing infrastructure costs by 30%",
-      "Created comprehensive documentation for cloud architecture",
-      "Collaborated with cross-functional teams on DevSecOps practices",
-    ],
-    technologies: ["GCP", "Cloud Run", "Cloud Functions", "BigQuery", "Python"],
+    technologies: ["Python", "OpenCV", "EasyOCR", "Image Processing", "API Integration", "Regex"],
   },
 ];
 

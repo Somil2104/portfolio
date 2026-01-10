@@ -19,7 +19,7 @@ export function Footer() {
               {personalInfo.title} passionate about building scalable infrastructure and intelligent systems.
             </p>
             <p className="text-sm text-muted-foreground">
-              {personalInfo.location}
+              {personalInfo.university} • Class of {personalInfo.graduationYear}
             </p>
           </div>
 

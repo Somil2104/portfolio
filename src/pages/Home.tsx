@@ -3,7 +3,7 @@ import { personalInfo, getFeaturedProjects, experiences, certifications } from '
 import { ScrollIndicator } from '@/components/ui/ScrollIndicator';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { SEOHead } from '@/components/seo/SEOHead';
-import { ArrowRight, Github, Linkedin, Mail, MapPin, GraduationCap, Briefcase, Award, Code2, Cloud, Brain, ExternalLink } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, GraduationCap, Briefcase, Award, Code2, Cloud, Brain, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -84,15 +84,15 @@ export default function Home() {
                 {personalInfo.heroIntroduction}
               </motion.p>
 
-              {/* Location */}
+              {/* University Badge */}
               <motion.div
                 className="flex items-center justify-center gap-2 text-muted-foreground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.7 }}
               >
-                <MapPin className="size-4" />
-                <span className="text-sm">{personalInfo.location}</span>
+                <GraduationCap className="size-4" />
+                <span className="text-sm">{personalInfo.university}</span>
               </motion.div>
 
               {/* CTA Buttons */}
@@ -195,11 +195,11 @@ export default function Home() {
                 <Card className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <Brain className="size-8 text-primary mb-2" />
-                    <CardTitle className="text-lg">AI & ML</CardTitle>
+                    <CardTitle className="text-lg">Libraries & Databases</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
-                      {personalInfo.skills.aiml.slice(0, 8).map((skill) => (
+                      {personalInfo.skills.librariesDatabases.slice(0, 8).map((skill) => (
                         <Badge key={skill} variant="secondary" className="text-xs">
                           {skill}
                         </Badge>
@@ -231,11 +231,11 @@ export default function Home() {
                 <Card className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <Briefcase className="size-8 text-primary mb-2" />
-                    <CardTitle className="text-lg">Tools</CardTitle>
+                    <CardTitle className="text-lg">OS/Software/Tools</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
-                      {personalInfo.skills.tools.map((skill) => (
+                      {personalInfo.skills.osSoftwareTools.map((skill) => (
                         <Badge key={skill} variant="secondary" className="text-xs">
                           {skill}
                         </Badge>
