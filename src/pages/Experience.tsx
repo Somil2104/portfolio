@@ -59,7 +59,7 @@ export default function Experience() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <p className="text-sm text-muted-foreground">Degree</p>
                       <p className="font-medium">{personalInfo.degree}</p>
@@ -67,10 +67,6 @@ export default function Experience() {
                     <div>
                       <p className="text-sm text-muted-foreground">Expected Graduation</p>
                       <p className="font-medium">{personalInfo.graduationYear}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">Location</p>
-                      <p className="font-medium">{personalInfo.location}</p>
                     </div>
                   </div>
                 </CardContent>
