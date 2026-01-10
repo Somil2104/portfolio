@@ -70,8 +70,8 @@ export const personalInfo: PersonInfo = {
   name: "Somil Jain",
   title: "DevOps & AI/ML Engineer",
   tagline: "Building intelligent systems with scalable infrastructure",
-  heroIntroduction: "Final year Computer Science student at VIT, passionate about automating deployments, building ML pipelines, and creating impactful tech solutions.",
-  biography: `I'm a final year BTech Computer Science Engineering student at Vellore Institute of Technology, specializing in DevOps practices and AI/ML applications.
+  heroIntroduction: "Final year Computer Science student passionate about automating deployments, building ML pipelines, and creating impactful tech solutions.",
+  biography: `I'm a final year BTech Computer Science Engineering student specializing in DevOps practices and AI/ML applications.
 
 My journey in tech started with a curiosity about how systems work at scale. This led me to explore the world of DevOps, where I found my passion for automation, containerization, and cloud infrastructure. Simultaneously, I dove deep into AI/ML, fascinated by how machines can learn and make decisions.
 
@@ -132,99 +132,97 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: "proj-1",
-    title: "MLOps Pipeline Platform",
-    slug: "mlops-pipeline-platform",
-    category: "devops",
-    description: "End-to-end MLOps platform for training, versioning, and deploying ML models at scale.",
-    longDescription: "A comprehensive MLOps platform that automates the entire machine learning lifecycle. Features include automated data versioning, experiment tracking, model training pipelines, and one-click deployments to Kubernetes clusters. Built with scalability and reproducibility in mind.",
-    technologies: ["Kubernetes", "Kubeflow", "MLflow", "Python", "ArgoCD", "MinIO"],
+    title: "Dost-Bot | AI-Powered Journal Application",
+    slug: "dost-bot",
+    category: "aiml",
+    description: "AI-driven journal web app with sentiment analysis and personalized responses using Google FLAN-T5-large model.",
+    longDescription: "Engineered an AI-driven journal web app with sentiment analysis and personalized responses using the Google FLAN-T5-large model, leveraging its 780 million parameter architecture for nuanced understanding of user mood and intent.",
+    technologies: ["React", "FastAPI", "Hugging Face", "NLP", "Sentiment Analysis"],
     features: [
-      "Automated model training pipelines",
-      "Experiment tracking and comparison",
-      "Model versioning and registry",
-      "A/B testing for model deployments",
-      "Real-time monitoring dashboards",
+      "Sentiment analysis using Hugging Face emotion/sentiment pipeline",
+      "Personalized responses using FLAN-T5 model (780M parameters)",
+      "High-performance backend with FastAPI",
+      "REST APIs for React client integration",
+      "Deployed on GitHub Pages for scalability",
     ],
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop",
-    github: "https://github.com/somiljain/mlops-platform",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop",
+    github: "https://github.com/somiljain/dost-bot",
     featured: true,
   },
   {
     id: "proj-2",
-    title: "AI-Powered Code Review Bot",
-    slug: "ai-code-review-bot",
+    title: "RetailIQ | Smart Inventory Forecasting",
+    slug: "retailiq",
     category: "aiml",
-    description: "GitHub bot that uses LLMs to provide intelligent code review suggestions.",
-    longDescription: "An intelligent GitHub bot that leverages large language models to automatically review pull requests. It identifies bugs, security vulnerabilities, code smells, and provides actionable suggestions. Integrates seamlessly with existing GitHub workflows.",
-    technologies: ["Python", "OpenAI API", "GitHub Actions", "FastAPI", "Docker"],
+    description: "AI-powered system for customer retention analysis and cost-to-serve optimization using ML models.",
+    longDescription: "Designed an AI-powered system leveraging ML models (Random Forest, XGBoost) to enable customer retention analysis and cost-to-serve optimization.",
+    technologies: ["Flask", "Node.js", "React", "Machine Learning", "Random Forest", "XGBoost"],
     features: [
-      "Automatic PR analysis and comments",
-      "Security vulnerability detection",
-      "Code quality suggestions",
-      "Custom rule configuration",
-      "Multi-language support",
+      "Customer retention analysis using ML models",
+      "Cost-to-serve optimization",
+      "Demand forecasting engine combining behavioral and transactional data",
+      "Stock level optimization to reduce inventory wastage",
+      "AI-driven decision-making for efficiency and satisfaction",
     ],
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&auto=format&fit=crop",
-    github: "https://github.com/somiljain/ai-code-review",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop",
+    github: "https://github.com/somiljain/retailiq",
     featured: true,
   },
+];
+
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  type: 'competition' | 'hackathon' | 'award';
+}
+
+export interface AdditionalInfo {
+  id: string;
+  title: string;
+  description: string;
+  category: 'hobby' | 'leadership' | 'extracurricular';
+}
+
+export const achievements: Achievement[] = [
   {
-    id: "proj-3",
-    title: "Cloud Cost Optimizer",
-    slug: "cloud-cost-optimizer",
-    category: "devops",
-    description: "Automated tool for analyzing and optimizing cloud infrastructure costs across providers.",
-    longDescription: "A multi-cloud cost optimization tool that analyzes resource usage patterns, identifies idle resources, and provides recommendations for cost savings. Supports AWS, GCP, and Azure with unified dashboards and automated remediation.",
-    technologies: ["Go", "AWS SDK", "GCP SDK", "React", "PostgreSQL", "Terraform"],
-    features: [
-      "Multi-cloud cost analysis",
-      "Idle resource detection",
-      "Rightsizing recommendations",
-      "Scheduled resource management",
-      "Cost forecasting",
-    ],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop",
-    github: "https://github.com/somiljain/cloud-cost-optimizer",
-    liveUrl: "https://cloudoptimizer.demo.com",
-    featured: true,
+    id: "ach-1",
+    title: "ZelestraXAWS Data Challenge (Second Edition)",
+    description: "Finalist out of 500+ teams, competing against 7000+ participants.",
+    type: "competition",
   },
   {
-    id: "proj-4",
-    title: "Smart Traffic Management System",
-    slug: "smart-traffic-system",
-    category: "aiml",
-    description: "Computer vision-based traffic monitoring and optimization system.",
-    longDescription: "Real-time traffic management system using computer vision to analyze traffic patterns, detect congestion, and optimize signal timing. Deployed at multiple intersections with measurable improvements in traffic flow.",
-    technologies: ["Python", "YOLO", "OpenCV", "TensorFlow", "Raspberry Pi", "MQTT"],
-    features: [
-      "Real-time vehicle detection",
-      "Traffic density analysis",
-      "Adaptive signal control",
-      "Emergency vehicle priority",
-      "Analytics dashboard",
-    ],
-    image: "https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=800&auto=format&fit=crop",
-    github: "https://github.com/somiljain/smart-traffic",
-    featured: false,
+    id: "ach-2",
+    title: "Amdocs GenAI Graduate Hackathon 2024–25",
+    description: "Selected as a Semi-Finalist among 10,893 participants; among the top 1% to successfully submit a working prototype.",
+    type: "hackathon",
   },
   {
-    id: "proj-5",
-    title: "Kubernetes Cluster Manager",
-    slug: "k8s-cluster-manager",
-    category: "devops",
-    description: "Web-based UI for managing and monitoring Kubernetes clusters.",
-    longDescription: "An intuitive web interface for managing Kubernetes clusters. Features include deployment management, pod monitoring, log streaming, and resource visualization. Designed for teams who want a simpler alternative to kubectl.",
-    technologies: ["React", "Go", "Kubernetes API", "WebSockets", "Tailwind CSS"],
-    features: [
-      "Visual cluster overview",
-      "Deployment management",
-      "Real-time log streaming",
-      "Resource metrics",
-      "RBAC integration",
-    ],
-    image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&auto=format&fit=crop",
-    github: "https://github.com/somiljain/k8s-manager",
-    featured: false,
+    id: "ach-3",
+    title: "Accelerate Her in Tech – Hackathon by Nokia",
+    description: "Cleared Round 1 from over 30,000 participants and advanced to the Code Hunt round, securing a top rank.",
+    type: "hackathon",
+  },
+];
+
+export const additionalInfo: AdditionalInfo[] = [
+  {
+    id: "add-1",
+    title: "Stock Market Analysis",
+    description: "Regularly conduct independent stock market analysis to strengthen investment insight, market research skills, and data-driven decision-making abilities.",
+    category: "hobby",
+  },
+  {
+    id: "add-2",
+    title: "Model United Nations",
+    description: "High Commendation as Delegate of Luxembourg in UNODC committee at CNMUN. Active participant in Model United Nations, cultivating executive presence and cross-functional communication acumen.",
+    category: "extracurricular",
+  },
+  {
+    id: "add-3",
+    title: "UI/UX Lead, Android Club",
+    description: "Led a team of 4 UI/UX developers and 5 designers to deliver user-centric interfaces for college Android projects, coordinating design workflows and mentoring members in best practices.",
+    category: "leadership",
   },
 ];
 
