@@ -1,4 +1,4 @@
-import{c as a,j as t,m as e,B as i,L as n}from"./index-CpmPl3ml.js";import{S as o}from"./SEOHead-ijGS249x.js";/**
+import{c as a,j as t,m as e,B as i,L as n}from"./index-DSb22oqg.js";import{S as o}from"./SEOHead-CDj_Rc4X.js";/**
  * @license lucide-react v0.462.0 - ISC
  *
  * This source code is licensed under the ISC license.
